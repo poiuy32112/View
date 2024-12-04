@@ -21,9 +21,15 @@
     <ClInclude Include="EntryPoint.h">
       <Filter>src\Hazel</Filter>
     </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>src\Hazel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
+      <Filter>src\Hazel</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
       <Filter>src\Hazel</Filter>
     </ClCompile>
   </ItemGroup>

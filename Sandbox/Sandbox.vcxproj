@@ -112,7 +112,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefintions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\c++%28vs2022%29\Hazel\Hazel</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\c++%28vs2022%29\Hazel\Hazel;$(SolutionDir)Hazel\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +128,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;_MBCS;%(PreprocessorDefintions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\c++%28vs2022%29\Hazel\Hazel</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\c++%28vs2022%29\Hazel\Hazel;$(SolutionDir)Hazel\vendor\spdlog\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
