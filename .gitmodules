@@ -1,0 +1,18 @@
+[submodule "View/vendor/spdlog"]
+	path = View/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "View/vendor/GLFw"]
+	path = View/vendor/GLFw
+	url = https://github.com/TheCherno/glfw
+[submodule "View/vendor/imgui"]
+	path = View/vendor/imgui
+	url = https://github.com/TheCherno/imgui
+[submodule "View/vendor/glm"]
+	path = View/vendor/glm
+	url = https://github.com/g-truc/glm
+[submodule "View/vendor/yaml-cpp"]
+	path = View/vendor/yaml-cpp
+	url = https://github.com/thecherno/yaml-cpp
+[submodule "View/vendor/ImGuizmo"]
+	path = View/vendor/ImGuizmo
+	url = https://github.com/thecherno/imguizmo
