@@ -266,7 +266,7 @@ namespace View
 
         // Gizmos
         Entity selectedEntity = m_SceneHierarchyPanel.GetSelectedEntity();
-        if (selectedEntity && m_GizmoType != -1)
+        if (selectedEntity && m_GizmoType != -1 && selectedEntity.HasComponent<TransformComponent>())
         {
             ImGuizmo::SetOrthographic(false);
             ImGuizmo::SetDrawlist();

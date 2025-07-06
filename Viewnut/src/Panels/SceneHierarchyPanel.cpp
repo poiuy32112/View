@@ -38,7 +38,10 @@ namespace View
 		if (ImGui::BeginPopupContextWindow(0, 1 | ImGuiPopupFlags_NoOpenOverItems))
 		{
 			if (ImGui::MenuItem("Create Empty Entity"))
-				m_Context->CreateEntity("Empty Entity");
+			{
+				Entity newEntity = m_Context->CreateEntity("Empty Entity");
+				SetSelectedEntity(newEntity);
+			}
 
 			ImGui::EndPopup();
 		}
@@ -60,6 +63,9 @@ namespace View
 
 	void SceneHierarchyPanel::DrawEntityNode(Entity entity)
 	{
+		if (!entity)
+			return;
+			
 		auto& tag = entity.GetComponent<TagComponent>().Tag;
 
 		ImGuiTreeNodeFlags flags = ((m_SelectionContext == entity) ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_OpenOnArrow;
@@ -205,6 +211,10 @@ namespace View
 
 	void SceneHierarchyPanel::DrawComponents(Entity entity)
 	{
+		// 检查entity是否有效
+		if (!entity)
+			return;
+			
 		if (entity.HasComponent<TagComponent>())
 		{
 			auto& tag = entity.GetComponent<TagComponent>().Tag;
@@ -227,13 +237,15 @@ namespace View
 		{
 			if (ImGui::MenuItem("Camera"))
 			{
-				m_SelectionContext.AddComponent<CameraComponent>();
+				if (m_SelectionContext)
+					m_SelectionContext.AddComponent<CameraComponent>();
 				ImGui::CloseCurrentPopup();
 			}
 
 			if (ImGui::MenuItem("Sprite Renderer"))
 			{
-				m_SelectionContext.AddComponent<SpriteRendererComponent>();
+				if (m_SelectionContext)
+					m_SelectionContext.AddComponent<SpriteRendererComponent>();
 				ImGui::CloseCurrentPopup();
 			}
 			ImGui::EndPopup();
