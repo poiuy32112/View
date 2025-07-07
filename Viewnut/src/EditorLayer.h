@@ -27,6 +27,7 @@ namespace View
 
         void NewScene();
         void OpenScene();
+        void OpenScene(const std::filesystem::path& path);
         void SaveSceneAs();
     private:
         View::OrthographicCameraController m_CameraController;
